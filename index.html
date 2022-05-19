@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Tuan Giang</title>
+	<meta charset="utf-8">
+	<meta name="Description" content="macroeconomics"/>
+	<meta name="Description" content="finance"/>
+	<meta name='Description' content="cryptocurrency"/>
+	<meta name="country" content="Vietnam"/>
+	<link rel="stylesheet" href="myblog.css"/>
+	<style>
+		p.uppercase {
+		  text-transform: uppercase;
+		}
+
+		p.lowercase {
+		  text-transform: lowercase;
+		}
+
+		p.capitalize {
+		  text-transform: capitalize;
+		}
+</style>
+</head>
+
+<body>
+
+<h1 id="menuText">Tuan Giang</h1>
+
+<nav id="navigation">
+<!-- Có dấu # để kết nối với ID phía dưới -->
+	<a href="#data" class="menu_left">Data</a>
+	<a href="#taichinh" class="menu_left">Tài Chính</a>
+	<a href="#duan" class="menu_left">Dự Án</a>
+</nav>
+
+<div id="flex_container">
+	<div id="flex_left">
+		<h3 id="menuData">Data</h3>
+		<a>1. Phân tích hơn 2000 mã cổ phiếu trên trang cafef</a>
+	</div>
+	<div id="flex_right">
+		<h4 class="post-title">
+			<a>Phân tích hơn 2000 mã cổ phiếu trên trang cafef</a>
+			<!-- <a href="file:///Users/tuangiang/Blog/feb2022/b1.html">1. Phân tích số liệu chứng khoán trên trang cafef bằng python</a> -->
+		</h4>
+		<p><b>1. Chuẩn bị</b></p>
+		<p><b>1.1. Cài đặt Selenium</b></p>
+		<p>Selenium được hiểu là một công cụ kiểm duyệt phần mềm hay duyệt web tự động (Automations test tools). Trong phạm vi bài viết này, mình sẽ sử dụng nó để truy cập trang web cafef một cách tự động và lấy dữ liệu</p>
+		<p>Selenium hiện hỗ trợ ngôn ngữ lập trình python. Bạn có thể cài đặt nó trên terminal thông qua trình quản lý thư viện Pip (Preferred Installer Program), cú pháp để cài đặt trên terminal</p>
+		<p><i>pip3 install selenium (pip3 đối với các máy đang chạy phiên bản python 3)</i></p>
+		<img src="pics/1/selenium.png" alt="Trulli" width="500" height="60">
+
+		<p><b>1.2. Cài đặt webdrive</b></p>
+		<p>WebDriver là một công cụ mã nguồn mở trong mảng test tự động, cho phép các ứng dụng web có thể hoạt động trên các trình duyệt khác nhau. Nó giúp các thao tác trên web thực hiện 1 cách tự động như tự động đi đến các địa chỉ web, click, input, chạy code</p>
+		<p>Tuỳ thuộc vào trình duyệt web đang sử dụng bạn sẽ phải cài webDrive khác nhau,  ví dụ với trình duyệt Chrome là ChromeDrive, Firefox là GeckoDrive</p>
+		<p><b>Cách chạy webDrive</b></p>
+		<p>Cần biết được đường dẫn chính xác webDrive chạy, ví dụ đối với safari đường dẫn sẽ là</p>
+		<p><i>executable_path='/usr/bin/safaridriver'</i></p>
+		<p>Cùng thử 1 đoạn code sử dụng webDrive của Firefox là GeckoDrive để vào trang Google tự động, sau khi chạy code trình duyệt FF sẽ tự khởi động và vào Google</p>
+		<img src="pics/1/webdrive.png" alt="Trulli" width="680" height="290">
+
+		<p><b>1.3. Danh sách các mã cổ phiếu</b></p>
+		<p>Theo thống kê trên trang cafef <i>(link http://s.cafef.vn/du-lieu-doanh-nghiep.chn)</i> có khoảng 2677 mã cổ phiếu đã niêm yết</p>
+		<img src="pics/1/stocks.png" alt="Trulli" width="600" height="400">
+		<p>Việc cần làm là truy cập vào đường link, sau đó copy toàn bộ mã cổ phiếu về và đặt trong 1 file text, các mã trong file text được phân cách bằng ký tự xuống dòng</p>
+		<img src="pics/1/stocksfile.png" alt="Trulli" width="600" height="380">
+
+		<p><b>2. Lấy dữ liệu thô từ trang cafef</b></p>
+		<p><b>2.1. Phân tích cấu trúc nội dung trên trang cafef</b></p>
+		<p>Về ý tưởng, mình sẽ sử dụng Selenium webdrive để tự động các bước truy cập vào trang cafef sau đó lấy dữ liệu về, để thực hiện, đầu tiên cần phân tích cấu trúc nội dung hiển thị của trang</p>
+		<p><b>Phân tích đường link truy cập</b></p>
+		<img src='pics/2/page2.png' alt='Trulli' width='500' height='60'>
+		<p>Để ý trong đường link truy cập hình trên có mã AAT, nếu muốn hiển thị mã AAA chỉ cần thay AAT bằng AAA là có thể truy cập</p>
+		<p>Khi đã có danh sách mã cổ phiếu từ trang, việc tự động nhập mã cổ phiếu vào đường link để lấy dữ liệu về có thể được lập trình 1 cách tự động
+		<p><b>Phân tích ngày hiển thị</b></p>
+		<img src='pics/2/page1.png' alt='Trulli' width='700' height='550'>
+		<p>Giá cổ phiếu sẽ được hiển thị trong bảng như hình trên, bảng này sẽ chứa thông tin về giá trong 20 ngày. Ngày đầu tiên trong bảng sẽ là ngày hiện hành, hoặc bạn có thể input ngày này vào ô 'Đến ngày', lúc này trang sẽ hiển thị nội dung 20 ngày trước đó đến ngày nhập trong ô 'Đến ngày'</p>
+
+		<p><b>2.2. Phân tích ngôn ngữ hiển thị của trang (HTML)</b></p>
+		Khi đã hiểu được cấu trúc hiển thị của trang, việc tiếp theo cần làm là lấy được nội dung hiển thị này về dưới dạng text. Điều này cần một chút hiểu biết về ngôn ngữ hiển thị 1 trang web
+		<p><b>Ngôn ngữ hiển thị 1 trang web</b></p>
+		<p>Hầu hết các website đều được xây dựng trên 3 ngôn ngữ HTML, CSS và Javascript. HTML và CSS chịu trách nhiệm cho phần hiển thị của trang web, cụ thể HTML xử lý phần nội dung, CSS liên quan đến trang trí còn Javascript là phần xử lý sau của 1 trang web, ví dụ khi bạn nhập email vào web lúc này Javascript sẽ kiểm tra xem email bạn nhập có đúng cú pháp không và đưa ra cảnh báo</p>
+		<p>Hiểu đơn giản, nếu xem website như 1 ngôi nhà có nhiều phòng, thì HTML có thể hiểu là phần thô của ngôi nhà, CSS là màu sơn, giấy dán tường, hoạ tiết... Còn Javascript sẽ thực hiện chức năng của ngôi nhà ví dụ như hệ thống cửa tự động, kiểm tra vân tay, nhiệt độ, chuông báo động...</p>
+		Mục tiêu của bài viết là lấy 1 phần nội dung hiển thị trên trang về phân tích, cụ thể là giá của 1 mã cổ phiếu nào đó nằm trong bảng, và điều đó liên quan đến HTML. Nếu trong 1 ngôi nhà, để lấy được 1 món đồ nào đó, bạn cần biết chính xác vị trị đặt nó, thì trong HTML vị trí đó được hiểu là ID, để biết được ID tiến hành nhấp chuột phải vào mảng nội dung cần lấy và chọn page source, trong page source sẽ nhìn thấy phần ID này</p>
+		<img src='pics/2/id.png' alt='Trulli' width='700' height='450'>
+		<p>Ví dụ trong phần input trong mục Đến ngày có ID như hình trên</p>
+		<p>Dựa vào phân tích cấu trúc hiển thị trang ở mục 2.1 sẽ có 2 phần ID cần quan tâm để có thể lập trình tự động lấy dữ liệu về là phần input trong mục 'Đến ngày' và mục nhấn 'Xem'. Hai ID này lần lượt sẽ là:</p>
+		<p><i>"ctl00_ContentPlaceHolder1_ctl03_dpkTradeDate2_txtDatePicker"</i></p>
+		<p><i>"ctl00_ContentPlaceHolder1_ctl03_btSearch"</i></p>
+
+		<p><b>2.3. Phần code để lấy nội dung</b></p>
+		<p>Khi đã chuẩn bị đầy đủ 1 danh sách đầy đủ các mã cổ phiếu trong một file text (stockcode.txt), thiết lập môi trường cho phần chạy code, cũng như phân tích phân tích được cấu trúc trang web, việc chạy code để lấy dữ liệu sẽ được tiến hành</p>
+		<img src='pics/2/code1.png' alt='Trulli' width='700' height='520'>
+		<p>Để rút ngắn thời gian chạy code, khoảng 2677 mã cổ phiếu sẽ được chia nhỏ ra và chạy song song trên terminal, toàn bộ các nội dung lấy được từ trang sẽ được lưu trong file raw_dataX</p>
+
+		<p><b>3. Làm sạch dữ liệu thô</b></p>
+		<p><b>3.1 Phân tích phần nội dung lấy về từ web</b></p>
+		<p>Nội dung lấy về là phần HTML gồm nhiều tag (<x> hoặc </x>) và các nội dung hiển thị bên trong tag, phần nội dung này sẽ được hiển thị trên trang web, ví dụ cùng xem 1 tag hiển thị nội dung 'ngày' trong phần HTML được lấy về, phần này được tô xanh như hình dưới</p>
+		<img src="pics/3/rawdata.png" alt="Trulli" width="700" height="450">
+		<p>Các tag sẽ chiếm hơn 90% nội dung lấy về, chúng cần được loại bỏ bằng các đoạn code. Ngoài ra, sẽ có 1 số nội dung không liên quan cũng cần được loại bỏ</p>
+		<p>Một vấn đề phát sinh trong file raw_dataX lấy về là luôn tồn tại 1 tag < tr (chi tiết trong phần tô xanh hình dưới), phần tag này chưa có ký tự đóng '>'. Nguyên tắc của xử lý dữ liệu là tất cả nội dung cần phải đồng bộ về cấu trúc thì mới có thể xử lý (thêm, bớt, sửa, xoá) đồng bộ, hiểu trong trường hợp này là các tag trong file raw_dataX phải cùng đặt trong < x>, do đó tag < tr cần được thêm '>' để trở thành < tr></p>
+		<img src="pics/3/tagtr.png" alt="Trulli" width="700" height="450">
+
+		<p><b>3.2. Phần code làm sạch dữ liệu thô</b></p>
+		<p>Tiến hành code để loại bỏ các tag và nội dung không cần thiết</p>
+		<img src="pics/3/oneline1.png" alt="Trulli" width="700" height="500">
+		<img src="pics/3/oneline2.png" alt="Trulli" width="700" height="480">
+		<p>Sau khi chạy đoạn code trên, toàn bộ dữ liệu thô đã được làm sạch và lưu vào 1 file txt. Mỗi dòng trong file này là thông tin của 1 mã cổ phiếu theo một ngày bất kỳ</p>
+		<img src='pics/3/onelinetxt.png' alt='Trulli' width='700' height='490'>
+
+		<p><b>4. Lọc dữ liệu</b></p>
+		<p><b>4.1. Import các file text đã được làm sạch</b></p>
+		<p>Thực hiện đoạn code sau để import tất cả các file txt vào array stocks</p>
+		<img src="pics/4/import1.png" alt="Trulli" width="700" height="455">
+		<p><b>4.2. Loại bỏ các dữ liệu bị trùng hoặc không cần thiết</b></p>
+		<p>Tiếp tục tiến hành code để lọc ra các dữ liệu bị trùng lặp, và chỉ giữ lại các giá trị cần thiết cho phân tích. Sau khi lọc xong, toàn bộ các dữ liệu sẽ được ghi vào 1 file text mới</p>
+		<img src="pics/4/import2.png" alt="Trulli" width="700" height="455">
+		<p>Sau quá trình làm sạch và loại bỏ các dữ liệu không cần thiết, dữ liệu lúc này trong file text hiển thị sẽ chỉ còn chứa mã, ngày, giá min & max</p>
+		<img src="pics/4/import3.png" alt="Trulli" width="700" height="480">
+
+		<p><b>5. Vẽ biểu đồ</b></p>
+		<p>Tiến hành vẽ linechart cho toàn bộ thông tin về các mã cổ cổ phiếu theo ngày với các chỉ số giá min & max từ file text, công việc này sẽ được thực hiện bằng đoạn code sau<p>
+		<img src="pics/5/chart1.png" alt="Trulli" width="700" height="490">
+		<img src="pics/5/chart2.png" alt="Trulli" width="700" height="210">
+		<p>Các linechart thu được sau khi tiến hành chạy code, chúng được lưu thành các file riêng lẻ trongg thư mục được chỉ định</p>
+		<img src="pics/5/chart3.png" alt="Trulli" width="700" height="490">
+	</div>
+</div>
+
+</body>
+</html>
