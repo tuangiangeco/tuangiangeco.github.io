@@ -1,0 +1,49 @@
+#menuText {
+	background-color: #9D784A;
+	text-align: center;
+	padding: 70px 10px 70px 10px;
+	margin: 0px 90px 0px 90px;
+}
+
+#menuData {
+	margin: 30px 0px 10px 0px;
+	text-decoration: underline;
+
+}
+#navigation {
+	margin: 0px 90px 0px 90px;
+}
+
+nav {
+	background-color: #333;
+/*Overflow:  hidden nghĩa là phần padding dư của Nav sẽ được dầu đi*/
+	overflow: hidden;
+}
+nav a {
+	color: black;
+	padding: 14px 20px;
+/*Block:  hiển thị theo hàng dọc*/
+	display: block;
+	text-align: center;
+	text-decoration: None;
+
+}
+nav a:hover {
+	background-color: #DDD;
+	color: black;
+}
+
+.menu_left {
+/*Khi float sang trái thì display:  block bị huỷ và lúc đó phần padding của chữ sẽ phồng theo padding của nav*/
+	float: left;
+	color: skyblue;
+}
+
+
+#flex_container {
+	margin: 0px 90px 0px 90px;
+}
+
+#flex_container h2 {
+	color: darkblue;
+}
