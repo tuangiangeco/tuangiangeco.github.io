@@ -43,7 +43,7 @@ nav a:hover {
 /*Khi float sang trái thì display:  block bị huỷ và lúc đó phần padding của chữ sẽ phồng theo padding của nav*/
 	float: left;
 	font-size: 120%;
-	color: beige;
+	color: sandybrown;
 }
 
 
@@ -51,7 +51,7 @@ nav a:hover {
 	margin: 0px 90px 0px 90px;
 }
 #flex_container h3 {
-	color: beige;
+	color: sandybrown;
 }
 #flex_container li {
 	margin: 10px 0px 10px 20px;
