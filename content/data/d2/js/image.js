@@ -49,8 +49,8 @@ function createPoints() {
 	point = []
 	color = 'black'
 
-	var x = event.clientX - 150;
-	var y = event.clientY - 60;
+	var x = event.clientX - 110;
+	var y = event.clientY - 130;
 
 	point.push(x);
 	point.push(y);
