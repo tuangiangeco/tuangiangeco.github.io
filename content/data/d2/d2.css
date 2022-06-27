@@ -2,7 +2,7 @@
 	background-color: #9D784A;
 	text-align: center;
 	padding: 70px 10px 70px 10px;
-	margin: 0px 90px 0px 90px;
+	margin: 0px 20px 0px 20px;
 }
 
 #menuData {
@@ -12,7 +12,7 @@
 }
 
 #navigation {
-	margin: 0px 90px 0px 90px;
+	margin: 0px 20px 0px 20px;
 }
 
 nav {
@@ -41,7 +41,7 @@ nav a:hover {
 }
 
 #flex_container {
-	margin: 10px 90px 0px 90px;
+	margin: 10px 20px 0px 20px;
 }
 #flex_container a {
 	font-weight: bold;
