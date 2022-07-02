@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Tuan Giang blog</title>
+	<meta charset="utf-8">
+	<meta name="Description" content="macroeconomics"/>
+	<meta name="Description" content="finance"/>
+	<meta name="country" content="Vietnam"/>
+	<link rel="stylesheet" href="m3.css"/>
+	<style>
+		div.a {
+		  text-align: center;
+		}
+
+		div.b {
+		  text-align: left;
+		}
+
+		div.c {
+		  text-align: right;
+		} 
+
+		div.d {
+		  text-align: justify;
+		} 
+	</style>
+</head>
+
+<body>
+
+<h1 id="menuText">Tuan Giang blog</h1>
+
+<nav id="navigation">
+<!-- Có dấu # để kết nối với ID phía dưới -->
+	<a href="#data" class="menu_left">Data</a>
+	<a href="#duan" class="menu_left">Khám phá</a>
+	<a href="#taichinh" class="menu_left">Vĩ mô</a>
+</nav>
+
+<div id="flex_container">
+	<a>Mối liên hệ giữa lạm phát và tăng trưởng tín dụng tại Việt Nam (2009-2022)</a>
+	<p><b>Lạm phát là gì?</b></p>
+	<p>Lạm phát là một thuật ngữ được nghe thường xuyên trong bối cảnh khủng hoảng kinh tế, vậy nó có ý nghĩa gì? </p>
+	<p>Lạm phát (inflation) là tình trạng vật giá tăng lên, cao hơn hẳn so với giá trị đồng tiền. Những vấn đề gần đây như thịt heo, nông sản, phân bón… tăng giá, đều là minh chứng cho sự xuất hiện của lạm phát.</p>
+	<p><b>Cung tiền và lạm phát</b></p>
+	<p>Nhiều số liệu về kinh tế đã cho thấy có một mối liên hệ giữa cung tiền và lạm phát của một quốc gia, để hiểu thêm về điều này mọi người có thể xem thêm bài viết "Tóm tắt lịch sử tiền tệ thế giới" trong mục vĩ mô. </p>
+	<p><i>Vậy cung tiền là gì ?</i></p>
+	<p>Khi nhắc đến cung tiền sẽ có hai chỉ số quan trọng làm thước đo là tín dụng và lượng cung tiền M2. Tín dụng hiểu đơn giản là lượng tiền cho cá nhân và tổ chức vay. Trong khi đó cung tiền M2 bao gồm số tiền gửi có kỳ hạn và không kỳ hạn cộng với lượng tiền mặt tại ngân hàng</p>
+	<p>Số liệu bảng dưới đây sẽ giải thích tại sao lạm phát tăng mạnh cuối năm 2007 và 2009</p>
+	<div class="a">
+		<img src="pics/lamphat.PNG" alt="Trulli" width="700" height="250">
+		<p><i>Bảng mức tăng tín dụng và cung tiền (%)</p></i>
+	</div>
+	<p><i>Chỉ số giá tiêu dùng (CPI) </i></p>
+	<p>CPI là một chỉ số dùng để đo lường mức độ lạm phát của một quốc gia, vậy CPI là gì?</p>
+	<p>Chỉ số giá tiêu dùng CPI (Consumer Price Index) là chỉ số phản ánh độ tăng (%) của giá hàng tiêu dùng và dịch vụ</p>
+	<p>CPI sẽ phản ánh được giá cả hàng hoá được mua bởi người tiêu dùng, đó là các mặt hàng tiêu dùng thiết yếu như xăng dầu, gạo, thịt heo...Hạn chế của CPI là chỉ sử dụng một giỏ hàng cố định để tính toán, ít cập nhật sự thay đổi</p>
+	<p><b>Tìm mối liên hệ giữa lạm phát và tăng trưởng tín dụng</b></p>
+	<p>Như đã phân tích ở trên có một mối liên hệ giữa tăng trưởng tín dụng và lạm phát, phần dưới đây sẽ trình bày kỹ thuật để tìm ra mối liên hệ giữa chúng</p>
+	<p>Mình sẽ gọi biến tăng trưởng tín dụng là x1, biến tăng lạm phát (CPI) là y, mối quan hệ giữa chúng giả sử được biểu diễn bằng phương trình sau: </p>
+	<p>y = ax + b</p>
+	<p>Bài toán cần giải quyết là đi tìm 2 hệ số a,b thuộc phuơng trình trên</p>
+	<p>Các số liệu của y, x được thống kê trên trang Vietstock, các bạn chỉ việc lấy về và đặt trong 1 file csv để làm đầu vào cho các bước xử lý tiếp theo</p>
+	<div class="a">
+		<img src="pics/csv.PNG" alt="Trulli" width="700" height="500">
+		<p><i>Số liệu mức tăng tín dụng (m1) và CPI </p></i>
+	</div>
+	<p>Mình sẽ lấy toàn bộ các số liệu trên theo tháng từ tháng một năm 2000 đến tháng 5 năm 2022, toàn bộ số liệu trên sẽ được đặt vào file csv gồm 3 dòng. Dòng đầu tiên là mức tăng trưởng (%) tín dụng theo từng tháng, dòng thứ 2 là mức tăng trưởng (%) cung tiền M2, và dòng số 3 là mức tăng (%) CPI. Một lưu ý quan trọng là mức tăng trưởng tín dụng sẽ tác động đến mức tăng lạm phát trong chu kỳ khoảng từ 5-7 tháng, do đó mức tăng CPI trong trường hợp này sẽ được lấy từ tháng 6 năm 2000 đến hết tháng 5 năm 2022, trong khi đó mức tăng tín dụng lấy từ tháng 1 năm 2000 đến tháng 12 năm 2021</p>
+	<div class="a">
+		<img src="pics/dolech.PNG" alt="Trulli" width="600" height="350">
+		<p><i>Độ lệch giữa mức tăng tín dụng và CPI có độ trễ khoảng 5-7 tháng</p></i>
+	</div>
+	<p>Theo đề bài, chúng ta sẽ cần tìm các hệ số a,b trong phương trình y = ax + b</p>
+	<p>Vế phải ax + b có thể biểu diễn bằng 2 vecto trong không gian 3 chiều: </p>
+	<p>ax có thể biểu diễn thành a[x1, x2, x3] </p>
+	<p>b có thể biểu diễn thành b[1, 1, 1] </p>
+	<p>Khi đó, phương trình y có thể viết lại theo phương trình vecto trong không gian ba chiều là y = a[x1, x2, x3] + b[1, 1, 1] </p>
+	<p>Hoặc y có thể được viết lại: y = [[x1, x2, x3], [1, 1, 1]]*[[a,b]] </p>
+	<p>Khi đó ta có thể viết gọn lại là y = Ax, với x là vecto cần tìm trong bài toán này, x sẽ chứa 2 tham số a và b</p>
+	<p>Để tìm ra tham số a,b mình sẽ dùng thư viện numpy để xử lý các vecto và thư viện matplotlib để xử lý đồ thị, các thư viện này đều có trong python, dưới đây là đoạn code chi tiết để tìm ra chúng</p>
+	<div class="a">
+		<img src="pics/code1.PNG" alt="Trulli" width="700" height="550">
+	</div>
+	<div class="a">
+		<img src="pics/code2.PNG" alt="Trulli" width="700" height="650">
+	</div>
+	<div class="a">
+		<img src="pics/code3.PNG" alt="Trulli" width="700" height="550">
+	</div>
+	<p>Code sau khi chạy sẽ cho ra kết quả a = 0.12241781 và b = 0.01113533, như vậy mối liên hệ giữa mức tăng tín dụng (x) và CPI (y) có thể biểu diễn bằng phương trình</p>
+	<p>y = 0.12241781x + 0.01113533</p>
+	<p>Với a = 0.12241781 cho thấy mức tăng tín dụng và lạm phát có quan hệ với nhau theo chiều thuận, khi tín dụng tăng thì CPI cũng sẽ tăng theo, lưu ý là mối quan hệ này có độ trễ pha từ trong khoảng 5 tháng theo số liệu phân tích</p>
+	<p>Một lưu ý là bài viết trên chỉ tìm ra mức độ tương quan giữa tín dụng và lạm phát, để đánh giá mức độ lạm phát cần phải xem xét nhiều yếu tố khác ngoài tín dụng, tín dụng chỉ là một phần trong bức tranh lạm phát. Một yếu tố khác khá quan trọng là lãi suất, việc giảm lãi suất sẽ thúc đẩy ngân hàng cho vay nhiều hơn gây ra tác động mạnh đến lạm phát. Ngoài ra giá cả hàng hóa cũng ảnh hưởng đến lạm phát đặc biệt là giá dầu, hay tỷ giá được điều chỉnh liên tục bởi ngân hàng nhà nước</p>
+
+</div>
+
+</body>
+</html>
