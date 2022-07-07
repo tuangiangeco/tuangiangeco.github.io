@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Tuan Giang blog</title>
+	<meta charset="utf-8">
+	<meta name="Description" content="macroeconomics"/>
+	<meta name="Description" content="finance"/>
+	<meta name="country" content="Vietnam"/>
+	<link rel="stylesheet" href="d3.css"/>
+	<style>
+		div.a {
+		  text-align: center;
+		}
+
+		div.b {
+		  text-align: left;
+		}
+
+		div.c {
+		  text-align: right;
+		} 
+
+		div.d {
+		  text-align: justify;
+		} 
+	</style>
+</head>
+
+<body>
+
+<h1 id="menuText">Tuan Giang blog</h1>
+
+<nav id="navigation">
+<!-- Có dấu # để kết nối với ID phía dưới -->
+	<a href="#data" class="menu_left">Data</a>
+	<a href="#duan" class="menu_left">Khám phá</a>
+	<a href="#taichinh" class="menu_left">Vĩ mô</a>
+</nav>
+
+<div id="flex_container">
+	<a>Gửi cùng lúc nhiều email bằng Google app script</a>
+	<p>Làm sao để gửi nhiều email một lúc, với mỗi địa chỉ là một nội dung khác nhau?</p>
+	<p>Giả sử bạn là giáo viên chủ nhiệm của một lớp, bạn cần gửi email thông báo đến phụ huynh tham dự buổi họp cuối năm để thông báo kết quả học tập. Hiện bạn đã có toàn bộ dữ liệu về phụ huynh của từng học sinh bao gồm tên và email của họ, cộng việc cần lúc này là làm sao thực hiện các công đoạn gửi email một cách nhanh, gọn và đơn giản nhất</p>
+	<p>Bài viết dưới đây sẽ hướng dẫn bạn thực hiện công việc này thông qua Google App script</p>
+	<p>Đầu tiên bạn cần có dữ liệu đầu vào bao gồm tên học sinh, tên phụ huynh, email và mẫu thư mời (thư mời sẽ nằm riêng một sheet), bạn hãy tải dữ liệu này lên vào một thư mục trong Gdrive, sau đó hãy thử bật file dữ liệu này lên</p>
+	<div class="a">
+		<img src="pics/danhsach.png" alt="Trulli" width="700" height="250">
+	</div>
+	<p>Trong hình danh sách phía trên, bạn để ý phần tô xanh chính là phần ID, phần này giống như địa chỉ của file vậy, ID của mỗi file là duy nhất, nếu muốn truy cập vào file này chúng ta cần biết rõ ID của nó</p>
+	<p>Ngoài danh sách tên phụ huynh, học sinh và email còn một sheet riêng chứa nội dung thư mời, sheet này chỉ chứa nội dung chung còn các thông tin về tên, email sẽ bỏ trống</p>
+	<div class="a">
+		<img src="pics/thumoi.png" alt="Trulli" width="700" height="250">
+	</div>
+	<p>Tiếp theo bạn vào phần App script để tiến hành thực hiện việc soạn và gửi email, để vào App script các bạn quay về vị trí Drive của tôi (https://drive.google.com/drive/u/0/my-drive) và vào mục mới, chọn Ứng dụng khác, sau đó chọn Google app script, lúc này một cửa sổ mới hiện lên</p>
+	<div class="a">
+		<img src="pics/appscript.png" alt="Trulli" width="700" height="250">
+	</div>
+	<p>Các bạn tiến hành nhập đoạn code sau, mình sẽ giải thích chi tiết trong phần dưới</p>
+	<div class="a">
+		<img src="pics/code.png" alt="Trulli" width="700" height="250">
+	</div> 
+	<p>Việc đầu tiên cần làm là truy cập được nội dung trong bảng tính đã tải lên bao gồm tên học sinh, phụ huynh và email. Để làm được điều này, cần truy cập được vào spreadsheet trong Google sheet</p>
+	<div class="a">
+		<img src="pics/spreadsheet.png" alt="Trulli" width="700" height="250">
+	</div>
+	<p>Theo tổ chức một bảng tính trong google sheet, phần đầu sẽ là Spreadsheet, tiếp theo là sheet, sau sheet là các range trong sheet, và cuối cùng là giá trị của từng ô</p>
+	<p>Theo cấu trúc như hình trên, để mở 1 file bảng tính thì đầu tiên cần vào spreadsheet, thứ 2 cần biết địa chỉ file đó (phần ID), bạn thực hiện đoàn script sau để bật file</p>
+	<p>	ss = SpreadsheetApp.openById('1pQlzUgF8OTawPPoKpQzxnz7_LRFb2VSD3HeXzXG0v3A');</p>
+	<p>Tiếp theo cần truy cập vào sheet chứa nội dung cần gửi bằng câu lệnh getSheetByName(“sheetName”)</p>
+	<p>	mails = ss.getSheetByName("email");</p>
+	<p>	thumois = ss.getSheetByName("thumoi")</p>
+	<p>Sau 2 bước này bạn đã truy cập được vào vị trí chính xác của sheet
+	Trong phần email gửi đi mình sẽ đính kèm một bức hình chứa bản đồ đường đi, để hiển thị được bức ảnh này trong phần nội dung gửi đi, bạn cần tải nó lên Drive sau đó gọi ảnh với cú pháp sau:</p>
+	<p>	var mapImageBlob = DriveApp.getFileById('17l3wul6KzCqetMiLQvjEig1fPWUaAxzT').getBlob()</p>
+	<p>Để gửi cho nhiều phụ huynh một lúc, các bạn có thể sử dụng vòng lặp bằng cách cho lặp qua từng ô giá trị chứa tên học sinh, tên phụ huynh và email, hình dưới diễn tả chi tiết các đoạn code thiết lập cho vòng lặp chạy</p>
+	<div class="a">
+		<img src="pics/loop.png.png" alt="Trulli" width="700" height="250">
+	</div>
+	<p>Để lấy giá trị của 1 range trong sheet dùng câu lệnh sau</p>
+	<p>	sheet.getRange(‘range’).getValue()</p>
+	<p>Lưu ý nếu range có nhiều hơn 1 ô thì value chuyển thành values, áp dụng câu lệnh trên sẽ lấy được giá trị của student, parent và email</p>
+	<p>Cuối cùng là phần gửi mail, để gửi 1 email dùng câu lệnh MailApp.sendMail({to: x, subject: y; htmlBody: z, inlineImage: t})</p>
+	<p>Phần htmlBody sẽ lấy nội dung bên sheet thumoi ghép vào</p>
+	<p>Để thêm hình ảnh vào trong nội dung phần htmlBody thực hiện cú pháp <img src=‘cid:mapImage’>, sau đó thêm vào mục inlineImage: {mapImage: mapImageBlob}</p>
+	<p>Cuối cùng save file và chạy, vào phần Đã gửi trong gmail ta sec có kết quả sau</p>
+	<div class="a">
+		<img src="pics/sent.png" alt="Trulli" width="700" height="250">
+	</div>
+</div>
+
+</body>
+</html>
