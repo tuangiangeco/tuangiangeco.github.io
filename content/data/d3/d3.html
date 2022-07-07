@@ -70,8 +70,7 @@
 	<p>	mails = ss.getSheetByName("email");</p>
 	<p>	thumois = ss.getSheetByName("thumoi")</p>
 	<p>Sau 2 bước này bạn đã truy cập được vào vị trí chính xác của sheet
-	<p>Trong phần email gửi đi mình sẽ đính kèm một bức hình chứa bản đồ đường đi, để hiển thị được bức ảnh này trong phần nội dung gửi đi, bạn cần tải nó lên Drive sau đó gọi ảnh với cú pháp sau:</p>
-	<p>	var mapImageBlob = DriveApp.getFileById('17l3wul6KzCqetMiLQvjEig1fPWUaAxzT').getBlob()</p>
+	<p>Trong phần email gửi đi mình sẽ đính kèm một bức hình chứa bản đồ đường đi, để hiển thị được bức ảnh này trong phần nội dung gửi đi, bạn cần tải nó lên Drive sau đó dùng lệnh .getBlob() để lấy ảnh</p>
 	<p>Để gửi cho nhiều phụ huynh một lúc, các bạn có thể sử dụng vòng lặp bằng cách cho lặp qua từng ô giá trị chứa tên học sinh, tên phụ huynh và email, hình dưới diễn tả chi tiết các đoạn code thiết lập cho vòng lặp chạy</p>
 	<div class="a">
 		<img src="pics/loop.png" alt="Trulli" width="700" height="400">
