@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Tuan Giang blog</title>
+	<meta charset="utf-8">
+	<meta name="Description" content="macroeconomics"/>
+	<meta name="Description" content="finance"/>
+	<meta name="country" content="Vietnam"/>
+	<link rel="stylesheet" href="d6.css"/>
+	<style>
+		div.a {
+		  text-align: center;
+		}
+
+		div.b {
+		  text-align: left;
+		}
+
+		div.c {
+		  text-align: right;
+		} 
+
+		div.d {
+		  text-align: justify;
+		} 
+	</style>
+</head>
+
+<body>
+
+<h1 id="menuText">Tuan Giang blog</h1>
+
+<nav id="navigation">
+<!-- Có dấu # để kết nối với ID phía dưới -->
+	<a href="#data" class="menu_left">Data</a>
+	<a href="#duan" class="menu_left">Khám phá</a>
+	<a href="#taichinh" class="menu_left">Vĩ mô</a>
+</nav>
+
+<div id="flex_container">
+	<a>Tự động hóa Google sheet - Phần 3</a>
+	<p><b>Sắp xếp các mã cổ phiếu dựa theo giá trị ROE (%) và ROA (%)</b></p>
+	<p>Khi đã có đầy đủ chỉ số ROA và ROE trong một sheet, bước tiếp theo cần sắp xếp theo thứ tự tăng dần hoặc giảm dần để từ đó dễ dàng xếp hạng cho các công ty. Ví dụ mình muốn chọn ra các công ty có ROE > 7% và ROA > 3.5%, việc thực hiện chỉ cần cho lặp qua tất cả các giá trị theo điều kiện if, nếu giá trị thỏa mãn if nó sẽ được ghi vào 1 array, cụ thể trong đoạn code dưới đây nó sẽ được lưu vào array allValueSort, các giá trị còn lại sẽ được lưu vào 1 array khác nhưng không cho ghi lên trang</p>
+	<p>Cần lưu ý trước khi ghi các giá trị của array allValueSort vào trang tính cần tiến hành xóa hết giá trị của trang tính đang hiển thị qua lệnh deleteRows(). Sau khi ghi vào trang tính, để ý ở cột 17 sẽ thấy chứa giá trị của ROE, dùng lệnh sort cho cột này để sắp xếp các giá trị theo thứ tự giảm dần. Để làm cho bảng tính gọn đi và chỉ hiển thị các nội dung cần thiết, các cột từ 2 đến 15 sẽ được ẩn đi bằng lệnh hideRows(), lúc này trên trang chỉ gồm 3 cột hiển thị bao gồm cột chứa mã cổ phiếu, ROA và ROE</p>
+	<div class="a">
+		<img src="pics/sortvalue.png" alt="Trulli" width="700" height="500">
+	</div>
+	<p>Sau khi cho chạy đoạn code trên, bảng tính sẽ hiển thị thông tin dưới đây</p>
+	<div class="a">
+		<img src="pics/sheet2012.png" alt="Trulli" width="700" height="520">
+	</div>
+	<p>Kết quả từ bảng tính trên cho thấy năm 2012 chỉ có 19 công ty trong số 372 công ty đạt ROE > 7% và ROA > 3.5%</p>
+	<p>Một câu hỏi đặt ra là công ty nào sẽ có tỉ lệ ROE  > 7% và ROA > 3.5% trong nhiều năm từ năm 2012 đến 2021. Việc đạt được điều này cho thấy lợi nhuận thu được của công ty được quay lại đầu tư vào công ty, đồng nghĩa là công ty đó ngày càng trở lên giá trị. Để làm được điều này cần xác định công ty đó xuất hiện bao nhiều lần trong các sheet từ năm 2012 đến năm 2021, chi tiết cách thực hiện mình sẽ cho lặp tất cả các mã cổ phiếu được đặt trong 1 array qua nội dung trong từng sheet theo năm, sau mỗi lần thấy bất kỳ mã cổ phiếu nào xuất hiện trong sheet nó sẽ cộng thêm 1, array chứa số lần mã cổ phiếu xuất hiện trong các sheet được tạo ra có độ dài bằng array chứa mã cổ phiếu, và thứ tự của chúng sẽ tương ứng với thứ tự array chứa mã cổ phiếu</p>
+	<div class="a">
+		<img src="pics/calstock.png" alt="Trulli" width="700" height="600">
+	</div>
+	<p>Sau khi chạy đoạn code trên, một cột Count sẽ được thêm ngay sau cột stockcode, cột này chứa số năm mã cổ phiếu đạt tỉ lệ ROE và ROA</p>
+	<div class="a">
+		<img src="pics/countsheet.png" alt="Trulli" width="700" height="500">
+	</div>
+	<p>Từ bảng tính trên có thể nhận thấy có 9 công ty đạt tỉ lệ ROE và ROA từ 5 năm trở lên, các công ty đó gồm: DRL, NNC, VNM, DSN, DVP, NCT, GDT, LIX, SMB</p>
+</div>
+
+</body>
+</html>
