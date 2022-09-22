@@ -1,0 +1,135 @@
+#menuText {
+	background-color: #9D784A;
+	text-align: center;
+	padding: 70px 10px 70px 10px;
+	margin: 0px 90px 0px 90px;
+}
+
+#menuData {
+	margin: 30px 0px 10px 0px;
+	text-decoration: underline;
+
+}
+
+#navigation {
+	margin: 0px 90px 0px 90px;
+}
+
+nav {
+	background-color: #333;
+/*Overflow:  hidden nghĩa là phần padding dư của Nav sẽ được dầu đi*/
+	overflow: hidden;
+}
+nav a {
+	color: black;
+	padding: 14px 20px;
+/*Block:  hiển thị theo hàng dọc*/
+	display: block;
+	text-align: center;
+	text-decoration: None;
+}
+nav a:hover {
+	background-color: #DDD;
+	color: sandybrown;
+}
+
+.menu_left {
+/*Khi float sang trái thì display:  block bị huỷ và lúc đó phần padding của chữ sẽ phồng theo padding của nav*/
+	float: left;
+	font-size: 120%;
+	color: beige;
+}
+
+#flex_container {
+	margin: 10px 90px 0px 90px;
+}
+#flex_container a {
+	font-weight: bold;
+	font-size: 150%;
+}
+
+#container {
+	position: relative;
+	width: 750px;
+	height: 560px;
+	border: 6px solid #000000;
+	background-color: #ffffcc;
+	overflow: hidden;
+	margin: 20px 0px;
+}
+
+#dot1 {position: absolute; top: 50px; left: 275px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot2 {position: absolute; top: 160px; left: 150px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot3 {position: absolute; top: 160px; left: 400px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot4 {position: absolute; top: 320px; left: 75px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot5 {position: absolute; top: 320px; left: 225px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot6 {position: absolute; top: 320px; left: 325px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot7 {position: absolute; top: 320px; left: 475px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot8 {position: absolute; top: 480px; left: 45px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot9 {position: absolute; top: 480px; left: 105px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot10 {position: absolute; top: 480px; left: 195px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot11 {position: absolute; top: 480px; left: 255px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot12 {position: absolute; top: 480px; left: 295px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot13 {position: absolute; top: 480px; left: 355px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot14 {position: absolute; top: 480px; left: 445px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+#dot15 {position: absolute; top: 480px; left: 505px; width:  36px; height: 36px; background-color: blue; border-radius: 50%}
+
+#number_line {
+	position: absolute;
+	height: 560px;
+	width: 750px;
+}
+
+#number_input {
+	position: absolute;
+	height: 30px;
+	width: 60px;
+	left: 600px;
+	top:  100px;
+}
+
+#number_button {
+	position: absolute;
+	left: 680px;
+	top:  100px;
+	height: 35px;
+}
+
+#addnumber {
+	position: absolute;
+	left: 600px;
+	top:  60px;
+	font-size: 150%;
+}
+
+#findnumber {
+	position: absolute;
+	left: 600px;
+	top:  180px;
+	font-size: 150%;
+}
+
+#number_find {
+	position: absolute;
+	height: 30px;
+	width: 60px;
+	left: 600px;
+	top:  220px;
+}
+
+#find_button {
+	position: absolute;
+	left: 680px;
+	top:  220px;
+	height: 35px;
+}
+
+#reset {
+	position: absolute;
+	left: 600px;
+	top:  320px;
+	height: 40px;
+	width: 120px;
+	font-size: 150%;
+	background-color: darkorange;
+}
