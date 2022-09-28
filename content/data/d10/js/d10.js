@@ -45,7 +45,7 @@ class PriorityBinaryHeap {
 		let length = this.values.length;
 
 		while (true) {
-			let element = this.values[idx].priority
+			let element = this.values[idx];
 			let leftChildIdx = 2 * idx + 1;
 			let rightChildIdx = 2 * idx + 2;
 			let leftchild,
@@ -54,11 +54,11 @@ class PriorityBinaryHeap {
 
 			if (leftChildIdx < length) {
 				leftchild = this.values[leftChildIdx].priority;
-				if (leftchild > element) swap = leftChildIdx;
+				if (leftchild > element.priority) swap = leftChildIdx;
 			}
 			if (rightChildIdx < length) {
 				rightchild = this.values[rightChildIdx].priority;
-				if ((swap == null && rightchild > element) || (swap != null && rightchild > leftchild)) swap = rightChildIdx;
+				if ((swap == null && rightchild > element.priority) || (swap != null && rightchild > leftchild)) swap = rightChildIdx;
 			}
 
 			if (swap == null) break;
