@@ -1,0 +1,189 @@
+#menuText {
+	background-color: #9D784A;
+	text-align: center;
+	padding: 70px 10px 70px 10px;
+	margin: 0px 90px 0px 90px;
+}
+
+#menuData {
+	margin: 30px 0px 10px 0px;
+	text-decoration: underline;
+
+}
+
+#navigation {
+	margin: 0px 90px 0px 90px;
+}
+
+nav {
+	background-color: #333;
+/*Overflow:  hidden nghĩa là phần padding dư của Nav sẽ được dầu đi*/
+	overflow: hidden;
+}
+nav a {
+	color: black;
+	padding: 14px 20px;
+/*Block:  hiển thị theo hàng dọc*/
+	display: block;
+	text-align: center;
+	text-decoration: None;
+}
+nav a:hover {
+	background-color: #DDD;
+	color: sandybrown;
+}
+
+.menu_left {
+/*Khi float sang trái thì display:  block bị huỷ và lúc đó phần padding của chữ sẽ phồng theo padding của nav*/
+	float: left;
+	font-size: 120%;
+	color: beige;
+}
+
+#flex_container {
+	margin: 10px 90px 0px 90px;
+}
+#flex_container a {
+	font-weight: bold;
+	font-size: 150%;
+}
+
+#container {
+	position: relative;
+	width: 750px;
+	height: 560px;
+	border: 6px solid #000000;
+	background-color: #ffffcc;
+	overflow: hidden;
+	margin: 20px 0px;
+}
+
+#dot1 {position: absolute; top: 56px; left: 93px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot2 {position: absolute; top: 176px; left: 50px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot3 {position: absolute; top: 90px; left: 337px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot4 {position: absolute; top: 188px; left: 195px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot5 {position: absolute; top: 346px; left: 116px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot6 {position: absolute; top: 265px; left: 251px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot7 {position: absolute; top: 179px; left: 425px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot8 {position: absolute; top: 61px; left: 519px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot9 {position: absolute; top: 364px; left: 324px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot10 {position: absolute; top: 210px; left: 537px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot11 {position: absolute; top: 304px; left: 470px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot12 {position: absolute; top: 423px; left: 466px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot13 {position: absolute; top: 152px; left: 670px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot14 {position: absolute; top: 387px; left: 590px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot15 {position: absolute; top: 465px; left: 670px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+#dot16 {position: absolute; top: 280px; left: 715px; width:  30px; height: 30px; background-color: blue; border-radius: 50%}
+
+#p1 {position: absolute; top: 46px; left: 103px; color: white}
+#p2 {position: absolute; top: 166px; left: 60px; color: white}
+#p3 {position: absolute; top: 80px; left: 347px; color: white}
+#p4 {position: absolute; top: 178px; left: 205px; color: white}
+#p5 {position: absolute; top: 336px; left: 126px; color: white}
+#p6 {position: absolute; top: 255px; left: 261px; color: white}
+#p7 {position: absolute; top: 169px; left: 435px; color: white}
+#p8 {position: absolute; top: 51px; left: 529px; color: white}
+#p9 {position: absolute; top: 354px; left: 334px; color: white}
+#p10 {position: absolute; top: 200px; left: 547px; color: white}
+#p11 {position: absolute; top: 294px; left: 480px; color: white}
+#p12 {position: absolute; top: 413px; left: 476px; color: white}
+#p13 {position: absolute; top: 142px; left: 680px; color: white}
+#p14 {position: absolute; top: 377px; left: 600px; color: white}
+#p15 {position: absolute; top: 455px; left: 680px; color: white}
+#p16 {position: absolute; top: 270px; left: 725px; color: white}
+
+#number_line {
+	position: absolute;
+	height: 560px;
+	width: 750px;
+}
+
+#start {
+	position: absolute;
+	left: 116px;
+	top: 510px;
+	font-size: 150%;
+}
+
+#start_point {
+	position: absolute;
+	left: 176px;
+	top: 512px;
+	font-size: 100%;
+	height: 25px;
+	width: 90px;
+}
+
+#finish {
+	position: absolute;
+	left: 300px;
+	top: 510px;
+	font-size: 150%;
+}
+
+#finish_point {
+	position: absolute;
+	left: 370px;
+	top: 512px;
+	font-size: 100%;
+	height: 25px;
+	width: 90px;
+}
+
+#find {
+	position: absolute;
+	left: 500px;
+	top: 512px;
+	font-size: 100%;
+	color: white;
+	height: 25px;
+	width: 115px;
+	background-color: darkblue;
+}
+
+#reset {
+	position: absolute;
+	left: 650px;
+	top: 30px;
+	font-size: 100%;
+	height: 25px;
+	width: 80px;
+	background-color: darkorange;
+}
+
+#way1 {
+	position: absolute;
+	left: 116px;
+	top: 420px;
+	font-size: 100%;
+	height: 25px;
+	width: 50px;
+	background-color: limegreen;
+}
+
+#way2 {
+	position: absolute;
+	left: 116px;
+	top: 465px;
+	font-size: 100%;
+	height: 25px;
+	width: 50px;
+	background-color: red;
+}
+
+#left {
+	position: absolute;
+	left: 176px;
+	top: 423px;
+	font-size: 100%;
+}
+
+#right {
+	position: absolute;
+	left: 176px;
+	top: 468px;
+	font-size: 100%;
+}
+
+
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Tuan Giang blog</title>
+	<meta charset="utf-8">
+	<meta name="Description" content="macroeconomics"/>
+	<meta name="Description" content="finance"/>
+	<meta name="country" content="Vietnam"/>
+	<link rel="stylesheet" href="d11.css"/>
+	<style>
+		div.a {
+		  text-align: center;
+		}
+
+		div.b {
+		  text-align: left;
+		}
+
+		div.c {
+		  text-align: right;
+		} 
+
+		div.d {
+		  text-align: justify;
+		} 
+	</style>
+</head>
+
+<body>
+
+<h1 id="menuText">Tuan Giang blog</h1>
+
+<nav id="navigation">
+<!-- Có dấu # để kết nối với ID phía dưới -->
+	<a href="#data" class="menu_left">Data</a>
+	<a href="#duan" class="menu_left">Khám phá</a>
+	<a href="#taichinh" class="menu_left">Vĩ mô</a>
+	<a href="#algorithm" class="menu_left">Algorithm</a>
+</nav>
+
+<div id="flex_container">
+	<a>Mô phỏng cấu trúc dữ liệu Graph</a>
+	<div id="container">
+		<span id="dot1"></span>
+		<span id="dot2"></span>
+		<span id="dot3"></span>
+		<span id="dot4"></span>
+		<span id="dot5"></span>
+		<span id="dot6"></span>
+		<span id="dot7"></span>
+		<span id="dot8"></span>
+		<span id="dot9"></span>
+		<span id="dot10"></span>
+		<span id="dot11"></span>
+		<span id="dot12"></span>
+		<span id="dot13"></span>
+		<span id="dot14"></span>
+		<span id="dot15"></span>
+		<span id="dot16"></span>
+
+		<svg id='number_line'>
+			<line x1="103" y1="66" x2="60" y2="186" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="103" y1="66" x2="347" y2="100" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="103" y1="66" x2="205" y2="198" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="60" y1="186" x2="205" y2="198" style="stroke:rgb(0,255,0);stroke-width:2"/> //bd
+			<line x1="60" y1="186" x2="126" y2="356" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="205" y1="198" x2="347" y2="100" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="205" y1="198" x2="261" y2="275" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="261" y1="275" x2="435" y2="189" style="stroke:rgb(255,0,0);stroke-width:2"/> //fg
+			<line x1="261" y1="275" x2="480" y2="314" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="261" y1="275" x2="334" y2="374" style="stroke:rgb(255,0,0);stroke-width:2"/> //fi
+			<line x1="347" y1="100" x2="529" y2="71" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="347" y1="100" x2="435" y2="189" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="435" y1="189" x2="529" y2="71" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="435" y1="189" x2="547" y2="220" style="stroke:rgb(255,0,0);stroke-width:2"/> //gj
+			<line x1="334" y1="374" x2="476" y2="433" style="stroke:rgb(0,0,255);stroke-width:2"/>
+			<line x1="126" y1="356" x2="261" y2="275" style="stroke:rgb(0,0,255);stroke-width:2"/> //ef
+			<line x1="126" y1="356" x2="334" y2="374" style="stroke:rgb(0,0,255);stroke-width:2"/> //ei
+			<line x1="480" y1="314" x2="547" y2="220" style="stroke:rgb(0,0,255);stroke-width:2"/> //kj
+			<line x1="476" y1="433" x2="600" y2="397" style="stroke:rgb(0,255,0);stroke-width:2"/> //ln
+			<line x1="476" y1="433" x2="680" y2="475" style="stroke:rgb(0,0,255);stroke-width:2"/> //l0
+			<line x1="529" y1="71" x2="680" y2="162" style="stroke:rgb(0,0,255);stroke-width:2"/> //hm
+			<line x1="547" y1="220" x2="680" y2="162" style="stroke:rgb(0,0,255);stroke-width:2"/> //jm
+			<line x1="480" y1="314" x2="725" y2="290" style="stroke:rgb(0,0,255);stroke-width:2"/> //kp
+			<line x1="480" y1="314" x2="600" y2="397" style="stroke:rgb(0,0,255);stroke-width:2"/> //kn
+			<line x1="600" y1="397" x2="680" y2="475" style="stroke:rgb(0,255,0);stroke-width:2"/> //no
+			<line x1="680" y1="475" x2="725" y2="290" style="stroke:rgb(0,0,255);stroke-width:2"/> //op
+			<line x1="725" y1="290" x2="680" y2="162" style="stroke:rgb(0,0,255);stroke-width:2"/> //pm
+			<line x1="261" y1="275" x2="347" y2="100" style="stroke:rgb(0,0,255);stroke-width:2"/> //fc
+		</svg>
+
+		<p id="p1">A</p>
+		<p id="p2">B</p>
+		<p id="p3">C</p>
+		<p id="p4">D</p>
+		<p id="p5">E</p>
+		<p id="p6">F</p>
+		<p id="p7">G</p>
+		<p id="p8">H</p>
+		<p id="p9">I</p>
+		<p id="p10">J</p>
+		<p id="p11">K</p>
+		<p id="p12">L</p>
+		<p id="p13">M</p>
+		<p id="p14">N</p>
+		<p id="p15">O</p>
+		<p id="p16">P</p>
+
+		<span id="start">Start:</span>
+		<select name="first_point" id="start_point">
+			<option value="">--Select--</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option value="F">F</option>
+			<option value="G">G</option>
+			<option value="H">H</option>
+			<option value="I">I</option>
+			<option value="J">J</option>
+			<option value="K">K</option>
+			<option value="L">L</option>
+			<option value="M">M</option>
+			<option value="N">N</option>
+			<option value="O">O</option>
+			<option value="P">P</option>
+		</select>
+
+		<span id="finish">Finish:</span>
+		<select name="finish_point" id="finish_point">
+			<option value="">--Select--</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option value="F">F</option>
+			<option value="G">G</option>
+			<option value="H">H</option>
+			<option value="I">I</option>
+			<option value="J">J</option>
+			<option value="K">K</option>
+			<option value="L">L</option>
+			<option value="M">M</option>
+			<option value="N">N</option>
+			<option value="O">O</option>
+			<option value="P">P</option>
+		</select>
+		<button id="find">Find min path</button>
+		<button id="reset">Reset</button>
+		<button id="way1"></button>
+		<button id="way2"></button>
+		<span id="left">One way (left to right)</span>
+		<span id="right">One way (right to left)</span>
+	</div>
+	<script src="js/d11.js"></script>
+</div>
+</body>
+</html>
