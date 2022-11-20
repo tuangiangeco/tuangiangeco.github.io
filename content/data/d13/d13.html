@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Tuan Giang blog</title>
+	<meta charset="utf-8">
+	<meta name="Description" content="macroeconomics"/>
+	<meta name="Description" content="finance"/>
+	<meta name="country" content="Vietnam"/>
+	<link rel="stylesheet" href="d13.css"/>
+	<style>
+		div.a {
+		  text-align: center;
+		}
+
+		div.b {
+		  text-align: left;
+		}
+
+		div.c {
+		  text-align: right;
+		} 
+
+		div.d {
+		  text-align: justify;
+		} 
+	</style>
+</head>
+
+<body>
+
+<h1 id="menuText">Tuan Giang blog</h1>
+
+<nav id="navigation">
+<!-- Có dấu # để kết nối với ID phía dưới -->
+	<a href="#data" class="menu_left">Data</a>
+	<a href="#duan" class="menu_left">Khám phá</a>
+	<a href="#taichinh" class="menu_left">Vĩ mô</a>
+	<a href="#algorithm" class="menu_left">Algorithm</a>
+</nav>
+
+<div id="flex_container">
+	<a>Ứng dụng cấu trúc SLL - Tạo sorted list lưu đơn đặt hàng của khách hàng</a>
+	<div id="container">
+		<p id="customer_code">Code<p>
+		<input type="text" id="customer_code_input" name="customer_code_input" value=""/>
+		<p id="customer_address">Address<p>
+		<input type="text" id="customer_address_input" name="customer_address_input" value=""/>
+		<p id="customer_details">Details<p>
+		<input type="text" id="customer_details_input" name="customer_details_input" value=""/>
+		<button id="add_customer_button">Add Customer</button>
+
+		<p id="customer_code_order">Code<p>
+		<input type="text" id="customer_code_order_input" name="customer_code_order_input" value=""/>
+		<p id="order_number">OrderNum<p>
+		<input type="text" id="order_number_input" name="order_number_input" value=""/>
+		<p id="order_date">OrderDate<p>
+		<input type="text" id="order_date_input" name="order_date_input" value="11-18-2022"/>
+		<p id="ship_date">ShipDate<p>
+		<input type="text" id="ship_date_input" name="ship_date_input" value="11-19-2022"/>
+		<p id="amount">Qty<p>
+		<input type="number" id="amount_input" name="amount_input" value=""/>
+		<button id="add_order_button">Add</button>
+
+		<p id="customer_code_order1">Code<p>
+		<input type="text" id="customer_code_order1_input" name="customer_code_order1_input" value=""/>
+		<p id="order1_number">OrderNum<p>
+		<input type="text" id="order1_number_input" name="order1_number_input" value=""/>
+
+		<button id="remove_order_button">RemoveOrder</button>
+		<button id="order_list_button">OrderList</button>
+		<button id="reset_button">Reset</button>
+
+		<p id="customer_code_table">CustomerCode<p>
+		<p id="order_number_table">OrderNumber<p>
+		<p id="order_date_table">OrderDate<p>
+		<p id="delivery_date_table">DeliveryDate<p>
+		<p id="total_amount_table">TotalAmount<p>
+
+	</div>
+	<script src="js/d13.js"></script>
+</div>
+</body>
+</html>

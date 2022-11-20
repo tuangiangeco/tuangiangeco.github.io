@@ -1,0 +1,306 @@
+#menuText {
+	background-color: #9D784A;
+	text-align: center;
+	padding: 70px 10px 70px 10px;
+	margin: 0px 90px 0px 90px;
+}
+
+#menuData {
+	margin: 30px 0px 10px 0px;
+	text-decoration: underline;
+
+}
+
+#navigation {
+	margin: 0px 90px 0px 90px;
+}
+
+nav {
+	background-color: #333;
+/*Overflow:  hidden nghĩa là phần padding dư của Nav sẽ được dầu đi*/
+	overflow: hidden;
+}
+nav a {
+	color: black;
+	padding: 14px 20px;
+/*Block:  hiển thị theo hàng dọc*/
+	display: block;
+	text-align: center;
+	text-decoration: None;
+}
+nav a:hover {
+	background-color: #DDD;
+	color: sandybrown;
+}
+
+.menu_left {
+/*Khi float sang trái thì display:  block bị huỷ và lúc đó phần padding của chữ sẽ phồng theo padding của nav*/
+	float: left;
+	font-size: 120%;
+	color: beige;
+}
+
+#flex_container {
+	margin: 10px 90px 0px 90px;
+}
+#flex_container a {
+	font-weight: bold;
+	font-size: 150%;
+}
+
+#container {
+	position: relative;
+	width: 750px;
+	height: 450px;
+	border: 6px solid #000000;
+	background-color: #ffffcc;
+	overflow: hidden;
+	margin: 20px 0px;
+}
+
+#customer_code {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	font-size: 100%;
+}
+
+#customer_code_input {
+	position: absolute;
+	left: 60px;
+	top: 30px;
+	font-size: 100%;
+	height: 15px;
+	width: 40px;
+}
+
+#customer_address {
+	position: absolute;
+	left: 150px;
+	top: 15px;
+	font-size: 100%;
+}
+
+#customer_address_input {
+	position: absolute;
+	left: 210px;
+	top: 30px;
+	font-size: 100%;
+	height: 15px;
+	width: 160px;
+}
+
+#customer_details {
+	position: absolute;
+	left: 390px;
+	top: 15px;
+	font-size: 100%;
+}
+
+#customer_details_input {
+	position: absolute;
+	left: 440px;
+	top: 30px;
+	font-size: 100%;
+	height: 15px;
+	width: 160px;
+}
+
+#add_customer_button {
+	position: absolute;
+	left: 630px;
+	top:  30px;
+	height: 20px;
+	background-color: orange;
+}
+
+#customer_code_order {
+	position: absolute;
+	left: 15px;
+	top: 50px;
+	font-size: 100%;
+}
+
+#customer_code_order_input {
+	position: absolute;
+	left: 60px;
+	top: 65px;
+	font-size: 100%;
+	height: 15px;
+	width: 40px;
+}
+
+#order_number {
+	position: absolute;
+	left: 120px;
+	top: 50px;
+	font-size: 100%;
+}
+
+#order_number_input {
+	position: absolute;
+	left: 195px;
+	top: 65px;
+	font-size: 100%;
+	height: 15px;
+	width: 50px;
+
+}
+
+#order_date {
+	position: absolute;
+	left: 265px;
+	top: 50px;
+	font-size: 100%;
+}
+
+#order_date_input {
+	position: absolute;
+	left: 340px;
+	top: 65px;
+	font-size: 100%;
+	height: 15px;
+	width: 85px;
+	
+}
+
+#ship_date {
+	position: absolute;
+	left: 440px;
+	top: 50px;
+	font-size: 100%;
+}
+
+#ship_date_input {
+	position: absolute;
+	left: 505px;
+	top: 65px;
+	font-size: 100%;
+	height: 15px;
+	width: 85px;
+	
+}
+
+#amount {
+	position: absolute;
+	left: 610px;
+	top: 50px;
+	font-size: 100%;
+}
+
+#amount_input {
+	position: absolute;
+	left: 640px;
+	top: 65px;
+	font-size: 100%;
+	height: 15px;
+	width: 40px;
+	
+}
+
+#add_order_button {
+	position: absolute;
+	left: 700px;
+	top:  65px;
+	height: 20px;
+	background-color: orange;
+}
+
+#customer_code_order1 {
+	position: absolute;
+	left: 15px;
+	top: 85px;
+	font-size: 100%;
+}
+
+#customer_code_order1_input {
+	position: absolute;
+	left: 60px;
+	top: 100px;
+	font-size: 100%;
+	height: 15px;
+	width: 40px;
+}
+
+#order1_number {
+	position: absolute;
+	left: 150px;
+	top: 85px;
+	font-size: 100%;
+}
+
+#order1_number_input {
+	position: absolute;
+	left: 225px;
+	top: 100px;
+	font-size: 100%;
+	height: 15px;
+	width: 50px;
+
+}
+
+#remove_order_button {
+	position: absolute;
+	left: 410px;
+	top:  101px;
+	height: 20px;
+	background-color: orange;
+}
+
+#order_list_button {
+	position: absolute;
+	left: 310px;
+	top:  101px;
+	height: 20px;
+	background-color: orange;
+}
+
+#reset_button {
+	position: absolute;
+	left: 540px;
+	top:  101px;
+	height: 20px;
+	background-color: red;
+}
+
+
+#customer_code_table {
+	position: absolute;
+	left: 65px;
+	top: 130px;
+	font-size: 100%;
+	color: darkgreen;
+}
+
+#order_number_table {
+	position: absolute;
+	left: 210px;
+	top: 130px;
+	font-size: 100%;
+	color: darkgreen;
+}
+
+#order_date_table {
+	position: absolute;
+	left: 340px;
+	top: 130px;
+	font-size: 100%;
+	color: darkgreen;
+}
+
+#delivery_date_table {
+	position: absolute;
+	left: 460px;
+	top: 130px;
+	font-size: 100%;
+	color: darkgreen;
+}
+
+#total_amount_table {
+	position: absolute;
+	left: 600px;
+	top: 130px;
+	font-size: 100%;
+	color: darkgreen;
+}
+
