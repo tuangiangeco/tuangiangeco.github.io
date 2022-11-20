@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Tuan Giang blog</title>
+	<meta charset="utf-8">
+	<meta name="Description" content="macroeconomics"/>
+	<meta name="Description" content="finance"/>
+	<meta name="country" content="Vietnam"/>
+	<link rel="stylesheet" href="d12.css"/>
+	<style>
+		div.a {
+		  text-align: center;
+		}
+
+		div.b {
+		  text-align: left;
+		}
+
+		div.c {
+		  text-align: right;
+		} 
+
+		div.d {
+		  text-align: justify;
+		} 
+	</style>
+</head>
+
+<body>
+
+<h1 id="menuText">Tuan Giang blog</h1>
+
+<nav id="navigation">
+<!-- Có dấu # để kết nối với ID phía dưới -->
+	<a href="#data" class="menu_left">Data</a>
+	<a href="#duan" class="menu_left">Khám phá</a>
+	<a href="#taichinh" class="menu_left">Vĩ mô</a>
+	<a href="#algorithm" class="menu_left">Algorithm</a>
+</nav>
+
+<div id="flex_container">
+	<a>Tạo danh sách đơn đặt hàng bằng cấu trúc Doubly linked list</a>
+	<div id="container">
+		<p id="item">Item</p>
+		<p id="price">Price</p>
+		<p id="stock">Stock</p>
+		<p id="wardrobe">Wardrobe</p>
+		<p id="desk">Desk</p>
+		<p id="chair">Chair</p>
+		<p id="lamp">Lamp</p>
+		<p id="sofa">Sofa</p>
+		<p id="mattress">Mattress</p>
+		<p id="doormat">Doormat</p>
+		<p id="shelves">Shelves</p>
+		<p id="pillows">Pillows</p>
+		<p id="fan">Fan</p>
+		<p id="sink">Sink</p>
+
+		<p id="wardrobe_price">3000</p>
+		<p id="desk_price">2000</p>
+		<p id="chair_price">1000</p>
+		<p id="lamp_price">300</p>
+		<p id="sofa_price">200</p>
+		<p id="mattress_price">1200</p>
+		<p id="doormat_price">50</p>
+		<p id="shelves_price">1400</p>
+		<p id="pillows_price">2000</p>
+		<p id="fan_price">500</p>
+		<p id="sink_price">300</p>
+
+		<p id="wardrobe_stock">20</p>
+		<p id="desk_stock">19</p>
+		<p id="chair_stock">18</p>
+		<p id="lamp_stock">25</p>
+		<p id="sofa_stock">30</p>
+		<p id="mattress_stock">14</p>
+		<p id="doormat_stock">42</p>
+		<p id="shelves_stock">30</p>
+		<p id="pillows_stock">40</p>
+		<p id="fan_stock">33</p>
+		<p id="sink_stock">35</p>
+
+		<p id="item_order">Item</p>
+		<p id="quantity_order">Quantity</p>
+
+		<input type="number" id="quantity_input" name="quantity_input" value="0"/>
+		<select name="item_select" id="item_select">
+			<option value="">-Select-</option>
+			<option value="wardrobe">wardrobe</option>
+			<option value="desk">desk</option>
+			<option value="chair">chair</option>
+			<option value="lamp">lamp</option>
+			<option value="sofa">sofa</option>
+			<option value="mattress">mattress</option>
+			<option value="doormat">doormat</option>
+			<option value="shelves">shelves</option>
+			<option value="pillows">pillows</option>
+			<option value="fan">fan</option>
+			<option value="sink">sink</option>
+		</select>
+
+		<button id="order_button">Order Now</button>
+		<button id="order_list_button">Ordered List</button>
+		<button id="cancel_button">Cancel</button>
+
+		<select name="item_choose" id="item_choose">
+			<option value="">-Select-</option>
+			<option value="wardrobe">wardrobe</option>
+			<option value="desk">desk</option>
+			<option value="chair">chair</option>
+			<option value="lamp">lamp</option>
+			<option value="sofa">sofa</option>
+			<option value="mattress">mattress</option>
+			<option value="doormat">doormat</option>
+			<option value="shelves">shelves</option>
+			<option value="pillows">pillows</option>
+			<option value="fan">fan</option>
+			<option value="sink">sink</option>
+		</select>
+
+		<p id="choose_product">Choose Item</p>
+		<button id="get_order">Get Order</button>
+		<button id="get_oldest_order">GetOldest Order</button>
+		<button id="get_newest_order">GetNewest Order</button>
+
+		<p id="choose_order">OrderNumber</p>
+		<input type="number" id="order_input" name="order_input" value=""/>
+		<button id="get_order_number">Get Order Number</button>
+		<button id="remove_order_number">Remove Order Number</button>
+
+		<p id="name_table">Name</p>
+		<p id="quantity_table">Quantity</p>
+		<p id="price_table">Price</p>
+		<p id="extendedprice_table">ExtendedPrice</p>
+		<p id="ordernumber_table">OrderNumber</p>
+	</div>
+	<script src="js/d12.js"></script>
+</div>
+</body>
+</html>
